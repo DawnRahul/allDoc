@@ -111,3 +111,50 @@ form label{
 .width-lg {
     width: 90%;
 }
+
+
+
+/* ****************** Media Query *********************** */
+
+@media only screen and (max-width: 600px){
+
+    .brand {
+        font-size: 56px;
+        margin-top: 42px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .company-slogan{
+        margin-top: 80px;
+    }
+    
+    .form-container{
+        width: 96%;
+    }
+
+    .form-container-box1 {
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .left-section{
+        height: 100vh;
+    } 
+
+    .main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sign-up-statement{
+        margin-top: 24px;
+        font-size: 12px;
+    }
+
+}
