@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allDoc - Employment Form</title>
+
+    <link rel="stylesheet" href="css/fill-details-style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,200;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- 
+        font-family: 'Poppins', sans-serif;
+     -->
+
+    <script src="emp1.js" defer></script>
+    <script src="emp2.js" defer></script>
+
+</head>
+<body>
+
+    <form action="/fill-details" method="POST" class="container">
+        <div  class="emp-form">
+            <h1>Employment Application</h1>
+            <hr/>
+            <!-- ******************* Personal Information **************** -->
+            <div class="container-lg">
+                <h2>Personal Information</h2>
+                <hr/>
+                <!-- ejs templating : personal information -->
+                <%- include ('partials/personal-information') %> 
+                
+            </div>
+            <!-- *********** ^^^^^^ *** Personal Information *** ^^^^^^ ******* -->
+
+
+            <!-- ******************* Employment Desired **************** -->
+            <div class="container-lg">
+                <h2>Employment Desired</h2>
+                <hr/>
+                <!-- ejs templating : Employment Desired -->
+                <%- include ('partials/employment-desired') %> 
+            
+            </div>
+            <!-- *********** ^^^^^^ *** Employment Desired *** ^^^^^^ ******* -->
+
+
+            <!-- ************************* Education ************************ -->
+            <div class="container-lg">
+                <h2>Education</h2>
+                <hr>
+                <!-- ejs tempalating : Education -->
+                <%- include ('partials/education') %> 
+
+            </div>
+            <!-- ************* ^^^^^^ *** Education *** ^^^^^^ ************** -->
+
+
+            <!-- ********************* SKills & Qualification *************** -->
+            <div class="container-lg">
+                <h2>Skills / Qualifications</h2>
+                <hr/>
+
+                <div class="skills-box">
+                    <div class="skills">
+                        <div><p class="margin-0">Skills</p></div>
+                        <div>
+                            <textarea name="skills-list" id="skills-list" ></textarea>
+                            <br/>
+                            <label for="skills-list" class="hint-text">List any relevant skills</label>
+                        </div>
+                    </div>
+                    <div class="qualifications">
+                        <div><p class="margin-0">Qualifications</p></div>
+                        <div>
+                            <textarea name="qualifications-list" id="qualifications-list" ></textarea>
+                            <br/>
+                            <label for="qualifications-list" class="hint-text">List any relevant qualifications</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *********** ^^^^^^ *** Skills & Qualification *** ^^^^^^ ******* -->
+
+
+            <!-- ************************* Employment ************************ -->
+
+            <div class="container-lg">
+                <h2>Employment</h2>
+                <hr/>
+
+                <%- include ('partials/employments') %> 
+                
+            </div>
+            <!-- ************* ^^^^^^ *** Employment *** ^^^^^^ ************** -->
+
+
+            <!-- ************************* References ************************ -->
+            <div class="container-lg">
+                <h2>References</h2>
+                <hr/>
+
+                <%- include ('partials/references')  %> 
+            </div>
+
+            <!-- ************* ^^^^^^ *** References *** ^^^^^^ ************** -->
+
+
+
+            <!-- ************************* Letter & Signature ************************ -->
+            <div class="container-lg">
+                <!-- Letter and Resume -->
+                <h2>Letter and Resume</h2>
+                <hr/>
+
+                <div class="letter-resume">
+                    <div class="letter">
+                        <div>
+                            <label for="letter-file">Cover Letter</label>
+                        </div>
+                        <div>
+                            <input type="file" name="letter" id="letter-file" class="width-100">
+                        </div>
+                    </div>
+                    <div class="resume">
+                        <div>
+                            <label for="resume-file">Resume</label>
+                        </div>
+                        <div>
+                            <input type="file" name="resume" id="resume-file" class="width-100">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature -->
+                <h2 class="margin-0">Signature</h2>
+                <hr>
+                <div class="signature-para">
+                    <p>By clicking the submit button below, I cerity that all of the information provided by me on this application is true and complete, and I understand that if any false information, ommissions, or misrepresentations are discovered, my application may be rejected and, if I am employed, my employement may be terminated at any time.  </p>
+                    
+                    <p>In consideration of my employment, I agree to conform to the company's rules and regulations, and I agree that my employment and compenstation can be terminated, with or without cause, and with or without notice, at any time, at either my or the company's option.</p>
+                
+                    <p>I also understand and agree that the terms and conditions of my employment may be changed, with or without cause, and with or without notice, at any time by the company.</p>
+                    <br>
+                    <div class="signature-upload">
+                        <div>
+                            <label for="signature-file">Signature</label>
+                        </div>
+                        <div>
+                            <input id="signature-file" class="width-100" type="file" style="font-size: 16px;"><br>
+                            <label for="signature-file"  class="hint-text">Upload your signature in JPEG/ JPG Format</label>
+                        </div>
+                    </div>
+                     
+                </div>
+                
+            </div>
+
+            
+            <!-- ************** ^^^^^^ *** Letter & Signature *** ^^^^^^ ************** -->
+
+            <hr>
+            <div id="submit">
+                <button type="submit">Submit</button>
+            </div>
+
+        </div> 
+
+    </form>
+
+    <footer>
+        <div>
+            <p>copyright @ 2021 allDoc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

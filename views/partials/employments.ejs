@@ -1,0 +1,137 @@
+
+<div class="fresher-or-not">
+    <!-- Fresher or Not -->
+    <label for="fresher">Currently Employed / Employed before ?</label>
+    <br/>
+    <input type="radio" onclick="yesFresher()" name="fresher" id="fresher-not" value="yes" checked>
+    <label for="fresher-not">Yes</label> <br/>
+    <input type="radio" onclick="notFresher()" name="fresher" id="fresher-yes" value="no">
+    <label for="fresher-yes">No</label> <br/>
+</div>
+
+<script>
+    function yesFresher(){
+        document.querySelector(".employments").style.display = "none";
+    }
+
+    function notFresher(){
+        document.querySelector(".employments").style.display = "grid";
+    }
+</script>
+<div class="employments">
+    <!-- Current Employment -->
+    <div class="emp-current emp-container">
+        <h3>Current Employment</h3>
+        <div class="emp-current-container">
+            <div class="emp-cur-bx1 emp-field-box">
+                <label for="current-employer">Current Employer</label><br/>
+                <input type="text" id="current-employer" class="width-80 width-100-mb"><br/>
+                <label class="hint-text">Name of current employer</label>
+            </div>
+            <div class="emp-cur-bx2 emp-field-box">
+                <label for="emp-cur-position">Position</label><br/>
+                <input type="text" id="emp-cur-position" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx3 emp-field-box">
+                <label for="emp-cur-reason">Reason for Leaving ?</label><br/>
+                <input type="text" id="emp-cur-reason" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx4 emp-field-box">
+                <label for="emp-cur-salary">Salary</label><br/>
+                <input type="text" id="emp-cur-salary"><br/>
+                <label class="hint-text">Salary in Rupees per Annum</label>
+            </div>
+            <div class="emp-cur-bx5 emp-field-box">
+                <label for="emp-cur-joining">Joining Date</label><br/>
+                <input type="date" id="emp-cur-join">
+            </div>
+            <div class="emp-cur-bx6 emp-field-box">
+                <label for="emp-cur-contact">May we contact ?</label><br/>
+                <input type="radio" name="emp-cur-contact-y" id="emp-cur-contact" value="yes">
+                <label for="">Yes</label><br/>
+                <input type="radio" name="emp-cur-contact-n" id="emp-cur-contact" value="no">
+                <label for="emp-cur-contact-n">No</label>
+            </div>
+
+        </div>
+    </div> <!-- Current Employment Ends here-->
+
+    <div class="more-emp1-box">
+        <label class="add-emp-1-label" for="more-emp1">Have previous employment(s) ?</label>
+        <button type="button" class="add-emp-1-btn">+</button>
+    </div>
+
+    <!-- Previous Employment 1-->
+    <div class="emp-container emp-previous-1 ">
+        <h3>Previous Employment 1</h3>
+        <div class="emp-previous-container">
+            <div class="emp-cur-bx1 emp-field-box">
+                <label for="previous-1-employer">Previous Employer</label><br/>
+                <input type="text" id="previous-1-employer" class="width-80 width-100-mb"><br/>
+                <label class="hint-text">Name of employer</label>
+            </div>
+            <div class="emp-cur-bx2 emp-field-box">
+                <label for="emp-prev1-position">Position</label><br/>
+                <input type="text" id="emp-prev1-position" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx3 emp-field-box">
+                <label for="emp-prev1-reason">Reason for Leaving ?</label><br/>
+                <input type="text" id="emp-prev1-reason" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx4 emp-field-box">
+                <label for="emp-prev1-salary">Salary</label><br/>
+                <input type="text" id="emp-prev1-salary"><br/>
+                <label class="hint-text">Salary in Rupees per Annum</label>
+            </div>
+            <div class="emp-cur-bx5 emp-field-box">
+                <label for="emp-prev1-joining">Joining Date</label><br/>
+                <input type="date" id="emp-prev1-join">
+            </div>
+            <div class="emp-cur-bx6 emp-field-box">
+                <label for="emp-prev1-leaving">Last Working Date</label><br/>
+                <input type="date" id="emp-prev1-leaving">
+            </div>
+
+        </div>
+    </div> <!-- Previous Employment 1 Ends here-->
+
+    <div class="more-emp2-box">
+        <label class="add-emp-2-label" for="more-emp2">Have another employment ?</label>
+        <button type="button" id="more-emp2" class="add-emp-2-btn">+</button>
+    </div>
+
+    <!-- Previous Employment 2 -->
+    <div class="emp-previous-2 emp-container">
+        <h3>Previous Employment 2</h3>
+        <div class="emp-previous-container">
+            <div class="emp-cur-bx1 emp-field-box">
+                <label for="previous-2-employer">Previous Employer</label><br/>
+                <input type="text" id="previous-2-employer" class="width-80 width-100-mb"><br/>
+                <label class="hint-text">Name of employer</label>
+            </div>
+            <div class="emp-cur-bx2 emp-field-box">
+                <label for="emp-prev2-position">Position</label><br/>
+                <input type="text" id="emp-prev2-position" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx3 emp-field-box">
+                <label for="emp-prev2-reason">Reason for Leaving ?</label><br/>
+                <input type="text" id="emp-2-reason" class="width-80 width-100-mb">
+            </div>
+            <div class="emp-cur-bx4 emp-field-box">
+                <label for="emp-prev2-salary">Salary</label><br/>
+                <input type="text" id="emp-prev2-salary"><br/>
+                <label class="hint-text">Salary in Rupees per Annum</label>
+            </div>
+            <div class="emp-cur-bx5 emp-field-box">
+                <label for="emp-prev2-joining">Joining Date</label><br/>
+                <input type="date" id="emp-prev2-join">
+            </div>
+            <div class="emp-cur-bx6 emp-field-box">
+                <label for="emp-prev2-leaving">Last Working Date</label><br/>
+                <input type="date" id="emp-prev2-leaving">
+            </div>
+
+        </div>
+    </div><!-- Previous Employment 2 Ends here-->
+    
+</div>

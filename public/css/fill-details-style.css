@@ -1,0 +1,478 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #060606;
+    background: -webkit-linear-gradient(to bottom, #1b2939, #060606);
+    background: linear-gradient(to bottom, #1b2939, #161616);
+}
+
+/* vvvvvvvvvvvv Re-usable classes vvvvvvvvvvvvvvvvvvvv */
+.flx-cl {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.flx-ro {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.hint-text {
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.width-80 {
+    width: 80% !important;
+}
+
+
+
+/* ^^^^^^^^^^^^ Re-usable classes ^^^^^^^^^^^^^^^^^^^^ */
+
+.container {
+    width: 80%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.808);
+    border-radius: 4px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.226);
+    border-left: 3px solid rgba(255, 255, 255, 0.226);
+}
+
+.container input, .container textarea , .container select{
+    border-radius: 4px;
+    border-width: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    height: fit-content;
+    padding: 4px 8px;
+}
+
+
+.container-lg {
+    padding: 16px;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 240px);
+    row-gap: 20px;
+}
+
+.education input, .employments input, .references-container input {
+    margin-top: 8px;
+}
+
+.emp-form {
+    /* background-color: chartreuse; */
+    padding: 16px;
+}
+
+.emp-desired {
+    /* background-color: coral; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: "box1 box2"
+                         "box3 ."
+                         "box4 box5";
+}
+
+.emp-box1, .emp-box2,.emp-box3,.emp-box4, .emp-box5 {
+    /* background-color: white; */
+    padding: 16px;
+    display: grid;
+}
+
+.emp-box1 {
+    grid-area: box1;
+}
+.emp-box2 {
+    grid-area: box2;
+}
+.emp-box3 {
+    grid-area: box3;
+}
+.emp-box4 {
+    grid-area: box4;
+}
+.emp-box5 {
+    grid-area: box5;
+}
+
+
+.employments {
+    display: none;
+    /* display: grid; */
+    /* background-color: white; */
+    padding: 16px 0px;
+    row-gap: 16px;
+}
+
+.emp-container {
+    width: 100%;
+    height: auto;
+    /* background-color: coral; */
+    padding: 16px 0px;
+}
+
+.emp-current-container, .emp-previous-container {
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 24px;
+}
+
+.emp-previous-1, .emp-previous-2 {
+    display: none;
+}
+
+.emp-field-box {
+    height: 80px;
+    padding: 16px;
+}
+
+.fresher-or-not {
+    padding: 16px;
+}
+
+footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.inputs-div {
+    /* background-color: coral; */
+    padding: 8px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 8px;
+}
+
+.input-label-span {
+    display: grid;
+    grid-template-rows: 30px 30px;
+    grid-row-gap: 1px;
+    width: 200px;
+}
+
+.inputs-div.width-lg {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+}
+
+.input-label-span {
+    width: 100%;
+}
+
+.label-input-div {
+    /* background-color: white; */
+    padding: 16px;
+    display: flex;
+    width: 100%;
+}
+
+.labels-div {
+    /* background-color: chartreuse; */
+    padding: 8px;
+    width: 20%;
+}
+
+.letter-resume input {
+    font-size: 16px;
+}
+
+.letter, .resume {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-template-rows: 60px;
+    padding: 16px;
+}
+
+.matriculation, .higher-secondary, .graduation, .other-education {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 16px;
+    /* background-color: coral; */
+}
+
+.mat-3 {
+    grid-column: 2/3;
+}
+
+.more-emp1-box, .more-emp2-box {
+    padding: 16px;
+}
+
+.more-emp2-box {
+    display: none;
+}
+
+.personal-info-div {
+    /* background-color: coral; */
+    padding: 16px;
+}
+
+.references-container {
+    /* background-color: coral; */
+    width: 100%;
+    display: grid;
+    row-gap: 12px;
+}
+
+.reference-box {
+    padding: 16px;
+    /* background-color: rgb(82, 255, 77); */
+    display: grid;
+    grid-template-columns: 40% 35% 25%;
+    grid-template-rows: 100px 100px;
+    
+}
+
+.signature-para {
+    padding: 16px;
+    padding-right: 72px;
+}
+.signature-para p {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+}
+
+.signature-upload {
+    display: grid;
+    grid-template-columns: 20% 60%;
+}
+
+.skills-box {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    padding: 16px;
+}
+
+.skills, .qualifications {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#skills-list, #qualifications-list {
+    width: 60%;
+    height: 70%;
+    resize: none;
+}
+
+
+#submit {
+    text-align: center;
+    margin: 24px;
+}
+
+#submit button {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+
+
+
+
+
+/* ************************************************************************ */
+/* **************************** MEDIA QUERY ******************************** */
+/* ************************************************************************ */
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 100vw;
+    }
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    option {
+        font-family: 14px;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        border: none;
+    }
+
+    .container-lg {
+        padding: 0px;
+    }
+
+    .container-lg hr {
+        width: 98%;
+        margin-left: 0px;
+    }
+
+    .education {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .education input {
+        width: 100%;
+    }
+
+    .emp-current-container, .emp-previous-container {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .emp-container input {
+        width: 100%;
+    }
+
+    .emp-container input[type="radio"] {
+        width: auto;
+    }
+
+    .emp-desired {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5";
+    }
+
+    .emp-form {
+        padding: 8px;
+    }
+
+    footer {
+        height: 50px;
+        padding-top: 4px;
+    }
+
+
+    .label-input-div {
+        flex-direction: column;
+    }
+    .labels-div {
+        width: 100%;
+    }
+
+    .flx-cl-mb {
+        flex-direction: column !important;
+    }
+
+    .inputs-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .letter, .resume {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 34px);
+    }
+
+    .matriculation, .higher-secondary, .graduation, .other-education {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 100px);
+    }
+
+    .matriculation {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    .mat-3 {
+        grid-column: 1/2;
+    }
+
+    .personal-info-div {
+        padding: 0px;
+    }
+
+    .reference-box {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 100px);
+    }
+
+    .reference-box input {
+        width: 100%;
+    }
+
+    .signature-para {
+        padding: 16px;
+    }
+
+    .signature-para p {
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .signature-upload {
+        grid-template-columns: 100%;
+        grid-template-rows: 40px;
+    }
+
+    .skills, .qualifications {
+        grid-template-columns: 100%;
+        grid-template-rows: 30px auto;
+    }
+
+    #skills-list, #qualifications-list {
+        width: 100%;
+    }
+
+    .width-100-mb {
+        width: 100% !important;
+    }
+
+}
+
+
